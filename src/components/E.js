@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import { arrayContext } from './A';
 
 const E = () => {
-    const array = useContext(arrayContext);
+    const {arrayState, arrayDispatch} = useContext(arrayContext);
 
     return (
         <div>
-            {array.map(ele => <div>{ele}</div>)}
-            <button>Add Element</button>
+            {arrayState.map(ele => <div key={ele}>{ele}</div>)}
+            <button onClick={() => arrayDispatch('Add element')}>Add Element</button>
+            <button onClick={() => arrayDispatch('Remove element')}>Remove Element</button>
+            <button onClick={() => arrayDispatch('Reset')}>Reset</button>
         </div>
     )
 }
