@@ -1,1 +1,2 @@
 # useContext and useReducer Hooks
+This repo displays me practicing with the useContext and useReducer Hooks. Looking back at my code in my Event Calendar project, I see that I should have used both of these hooks.
